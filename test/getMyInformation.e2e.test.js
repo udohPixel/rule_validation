@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 
 // import other libraries
 const myInformationData = require('./getMyInformation.data.mock.json');
-const getMyInformationCtrl = require('../rule-validation/controllers/getMyInformation.controller');
+const getMyInformationCtrl = require('../rule_validation/controllers/getMyInformation.controller');
 
 // get my information e2e test
 describe('GET MY INFORMATION E2E TEST', () => {
@@ -27,7 +27,7 @@ describe('GET MY INFORMATION E2E TEST', () => {
       status.returns(res);
     });
 
-    it('should return my information successfully', async () => {
+    it('should return my information successfully.', async () => {
       const req = {};
 
       await getMyInformationCtrl(req, res);

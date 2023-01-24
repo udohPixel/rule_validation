@@ -24,26 +24,26 @@ class ApiResponse {
 
   // error response
   error(res, message, data, code) {
-    return this.send(res, code || 500, 'error', message, data);
+    return this.send(res, code || 400, 'error', message, data ?? null);
   }
 
-  // error response
-  errorObject(res, error, code, meta) {
+  // error object response
+  errorObject(res, error, statusCcode, meta) {
     let message;
-    let theCode;
+    let code;
 
     if (error instanceof ApplicationException) {
       message = error.message;
-      theCode = error.code;
-    } else if (code === 404) {
+      code = error.code;
+    } else if (statusCcode === 404) {
       message = 'Not found';
     } else {
       logger.error(error.message, { ...error, meta });
-      message = 'Unexpected error occurred while processing your request';
-      theCode = 500;
+      message = 'Invalid JSON payload passed.';
+      code = 400;
     }
 
-    return this.send(res, theCode, 'error', message);
+    return this.send(res, code, 'error', message, null);
   }
 }
 

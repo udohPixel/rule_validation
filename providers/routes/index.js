@@ -2,7 +2,7 @@
 const express = require('express');
 
 // import required routes
-const ruleValidation = require('../../rule-validation/routes/rules.route');
+const ruleValidation = require('../../rule_validation/routes/rules.route');
 
 // create express router
 const router = express.Router();

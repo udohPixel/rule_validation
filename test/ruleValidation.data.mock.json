@@ -1,0 +1,124 @@
+{
+  "bodyData": {
+    "successGte": {
+      "rule": {
+        "field": "missions.count",
+        "condition": "gte",
+        "condition_value": 30
+      },
+      "data": {
+        "name": "James Holden",
+        "crew": "Rocinante",
+        "age": 34,
+        "position": "Captain",
+        "missions": {
+          "count": 45,
+          "successful": 44,
+          "failed": 1
+        }
+      }
+    },
+    "successContains": {
+      "rule": {
+        "field": "2",
+        "condition": "contains",
+        "condition_value": "Roci"
+      },
+      "data": [
+        "The Nauvoo",
+        "The Razorback",
+        "The Roci",
+        "Tycho"
+      ]
+    },
+    "failEq": {
+      "rule": {
+        "field": "0",
+        "condition": "eq",
+        "condition_value": "a"
+      },
+      "data": "damien-marley"
+    },
+    "failGt": {
+      "rule": {
+        "field": "missions",
+        "condition": "gt",
+        "condition_value": 30
+      },
+      "data": {
+        "name": "James Holden",
+        "crew": "Rocinante",
+        "age": 34,
+        "position": "Captain",
+        "missions": 12
+      }
+    },
+    "failNeq": {
+      "rule": {
+        "field": "missions.count",
+        "condition": "neq",
+        "condition_value": 30
+      },
+      "data": {
+        "name": "James Holden",
+        "crew": "Rocinante",
+        "age": 34,
+        "position": "Captain",
+        "missions": {
+          "count": 30,
+          "successful": 44,
+          "failed": 1
+        }
+      }
+    },
+    "nestingError": {
+      "rule": {
+        "field": "missions.count.task",
+        "condition": "gte",
+        "condition_value": 30
+      },
+      "data": {
+        "name": "James Holden",
+        "crew": "Rocinante",
+        "age": 34,
+        "position": "Captain",
+        "missions": {
+          "count": 45,
+          "successful": 44,
+          "failed": 1
+        }
+      }
+    },
+    "missingOneLevelError": {
+      "rule": {
+        "field": "5",
+        "condition": "contains",
+        "condition_value": "rocinante"
+      },
+      "data": [
+        "The Nauvoo",
+        "The Razorback",
+        "The Roci",
+        "Tycho"
+      ]
+    },
+    "missingTwoLevelsError": {
+      "rule": {
+        "field": "missions.count",
+        "condition": "gte",
+        "condition_value": 30
+      },
+      "data": {
+        "name": "James Holden",
+        "crew": "Rocinante",
+        "age": 34,
+        "position": "Captain",
+        "missions": {
+          "counter": 45,
+          "successful": 44,
+          "failed": 1
+        }
+      }
+    }
+  }
+}
