@@ -10,13 +10,13 @@ chai.use(chaiHttp);
 
 // import other libraries
 const myInformationData = require('./getMyInformation.data.mock.json');
-const getMyInformationService = require('../rule-validation/services/getMyInformation.service');
+const getMyInformationService = require('../rule_validation/services/getMyInformation.service');
 
 // get my information unit test
 describe('GET MY INFORMATION UNIT TEST', () => {
   const returnData = { ...myInformationData.returnData.valid };
 
-  it('should return my information successfully', () => {
+  it('should return my information successfully.', () => {
     const response = getMyInformationService();
 
     expect(response).to.be.an('object');
