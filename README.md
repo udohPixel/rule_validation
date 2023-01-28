@@ -16,7 +16,7 @@
 https://documenter.getpostman.com/view/25349712/2s8ZDbVfdx
 
 ### Hosted API
-https://www.render.com/...
+https://rule-validation.onrender.com
 
 ### Github Repo
 https://github.com/udohPixel/rule_validation
