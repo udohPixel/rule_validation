@@ -1,0 +1,42 @@
+{
+  "name": "rule_validation",
+  "version": "1.0.0",
+  "description": "A simple rule-validation API.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha test/*.test.js --timeout 20000",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udohPixel/rule_validation.git"
+  },
+  "keywords": [
+    "validation",
+    "rules",
+    "rule-validation"
+  ],
+  "author": "Udoh Ndem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udohPixel/rule_validation/issues"
+  },
+  "homepage": "https://github.com/udohPixel/rule_validation#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.7.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1"
+  }
+}

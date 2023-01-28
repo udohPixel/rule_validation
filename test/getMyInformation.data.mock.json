@@ -1,0 +1,12 @@
+{
+  "returnData": {
+    "valid": {
+      "name": "Udoh Ndem",
+      "github": "@udohPixel",
+      "email": "udohndem@gmail.com",
+      "mobile": "07067944338",
+      "twitter": "@udohPixel"
+    },
+    "invalid": null
+  }
+}
